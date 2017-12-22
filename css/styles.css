@@ -12,8 +12,8 @@ a {color:#4b3c8f}
 
 img {border:none}
 
-nav {position:absolute; left:0; top:130px; right:0; z-index:99; text-align:center}
-nav.fixed {position:fixed; height:67px; top:0; padding:43px 0 0 0; background:rgba(0, 0, 0, .87)}
+nav {position:absolute; left:0; top:87px; height:67px; padding:43px 0 0 0; right:0; z-index:99; text-align:center; transition:background .5s}
+nav.fixed {position:fixed; top:0; background:rgba(0, 0, 0, .87)}
 nav ul {margin:0; padding:0; list-style:none; display:inline-block; vertical-align:top; font-size:14px; text-transform:uppercase; letter-spacing:1px}
 nav ul li {float:left; margin:0 0 0 40px; padding:0}
 nav ul li:first-child {margin:0}
@@ -23,7 +23,7 @@ nav ul li a:hover {opacity:.5}
 .container {max-width:1200px; margin:0 auto; padding:0 15px}
 .container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
-.intro {height:100vh; position:relative; background:#000 url(../images/intro.jpg) no-repeat center; background-size:cover}
+.intro {padding:56.25% 0 0 0; position:relative; background:#000 url(../images/intro.jpg) no-repeat center; background-size:cover}
 .intro iframe {position:absolute; left:0; top:0; width:100%; height:100%}
 
 .intro-content {position:absolute; left:0; top:0; right:0}
@@ -37,19 +37,19 @@ nav ul li a:hover {opacity:.5}
 .phone a {color:#fff; text-decoration:none}
 
 .shops {float:right; font-size:12px; color:#fff; padding:61px 40px 0 0; text-transform:uppercase; letter-spacing:1px}
-.shops a {color:#fff; text-decoration:none; opacity:.5; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
-.shops a:hover {opacity:1}
-.shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); opacity:.5; transition:opacity .3s}
-.shops a:hover:before {opacity:1}
+.shops a {color:#fff; text-decoration:none; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
+.shops a:hover {opacity:.5}
+.shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); transition:opacity .3s}
+.shops a:hover:before {opacity:.5}
 
-.intro-more {position:absolute; left:0; bottom:79px; right:0}
+.intro-more {position:absolute; left:0; top:100vh; margin-top:-106px; right:0}
 .intro-more-wrap {position:relative; height:0}
-.intro-more-wrap a {float:right; font-size:12px; color:#fff; padding:0 0 0 32px; text-transform:uppercase; letter-spacing:1px; position:relative; text-decoration:none; opacity:.5; transition:opacity .3s}
-.intro-more-wrap a:hover {opacity:1}
-.intro-more-wrap a:before {content:""; display:block; width:23px; height:18px; position:absolute; left:0; top:4px; background:url(../images/intro-more.png); opacity:.5; transition:opacity .3s}
-.intro-more-wrap a:hover:before {opacity:1}
+.intro-more-wrap a {float:right; font-size:12px; color:#fff; padding:0 0 0 32px; text-transform:uppercase; letter-spacing:1px; position:relative; text-decoration:none; transition:opacity .3s}
+.intro-more-wrap a:hover {opacity:.5}
+.intro-more-wrap a:before {content:""; display:block; width:23px; height:18px; position:absolute; left:0; top:4px; background:url(../images/intro-more.png); transition:opacity .3s}
+.intro-more-wrap a:hover:before {opacity:.5}
 
-.intro-scroll {position:absolute; left:50%; bottom:70px; width:20px; height:46px; background:url(../images/intro-scroll.png); margin:0 0 0 -10px}
+.intro-scroll {position:absolute; left:50%; top:100vh; width:20px; height:46px; background:url(../images/intro-scroll.png); margin:-116px 0 0 -10px}
 
 .teaser {height:830px; background:url(../images/teaser.jpg) no-repeat center; background-size:cover; color:#fff; text-align:center; font-size:25px; line-height:30px}
 .teaser-inner {position:relative; top:50%; transform:translateY(-50%)}
@@ -68,7 +68,7 @@ nav ul li a:hover {opacity:.5}
 .sun-light-text p {margin:25px 0 0 0; padding:0}
 .sun-light-text p.sun-light-subtitle {margin:35px 0 -10px 0}
 
-.video-1 {height:799px; position:relative; background:url(../images/video-1.jpg) no-repeat center; background-size:cover}
+.video-1 {padding:56.25% 0 0 0; position:relative; background:url(../images/video-1.jpg) no-repeat center; background-size:cover}
 .video-1 iframe {position:absolute; left:0; top:0; width:100%; height:100%}
 
 .moon-light {background:#14192b url(../images/moon-light.jpg) no-repeat center; background-size:cover; color:#fff; padding:0 0 81px 0}
@@ -88,7 +88,7 @@ nav ul li a:hover {opacity:.5}
 .author-text p {margin:27px 0 0 0; padding:0}
 .author-text p:first-child {margin:0}
 
-.video-2 {height:811px; position:relative; background:url(../images/video-2.jpg) no-repeat center; background-size:cover}
+.video-2 {padding:56.25% 0 0 0; position:relative; background:url(../images/video-2.jpg) no-repeat center; background-size:cover}
 .video-2 iframe {position:absolute; left:0; top:0; width:100%; height:100%}
 
 .design {background:#edd6ad url(../images/design.jpg) no-repeat center bottom; padding:85px 0 77px 0; position:relative}
@@ -112,6 +112,8 @@ nav ul li a:hover {opacity:.5}
 .company-main {float:right; width:29%; text-align:center; padding:74px 0 0 0}
 .company-main-logo {line-height:0}
 .company-main-text {font-style:italic; color:#6a6a6a; font-size:15px; line-height:23px; padding:31px 0 0 0}
+.company-main-text a {text-decoration:none}
+.company-main-text a:hover {text-decoration:underline}
 
 .contacts {height:389px; position:relative; background:url(../images/contacts-map.png) no-repeat center}
 
@@ -121,6 +123,8 @@ nav ul li a:hover {opacity:.5}
 .contacts-address {padding:31px 0 0 0}
 .contacts-phones a {color:#000; text-decoration:none}
 .contacts-email {font-style:italic; font-size:17px; padding:25px 0 0 0}
+.contacts-email a {text-decoration:none}
+.contacts-email a:hover {text-decoration:underline}
 .contacts-social {font-style:italic; font-size:17px; padding:13px 0 0 0}
 .contacts-social a {display:inline-block; vertical-align:middle; position:relative; line-height:0; margin:0 0 0 8px}
 .contacts-social a:hover img:nth-child(1) {transition:opacity .3s}
@@ -136,7 +140,7 @@ footer {background:#101519; text-transform:uppercase; font-size:12px; letter-spa
 .footer-phone {float:right; text-align:right; width:22%}
 .footer-phone a {color:#fff; text-decoration:none}
 .footer-shops {float:right}
-.footer-shops a {color:#fff; text-decoration:none; opacity:.5; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
-.footer-shops a:hover {opacity:1}
-.footer-shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); opacity:.5; transition:opacity .3s}
-.footer-shops a:hover:before {opacity:1}
+.footer-shops a {color:#fff; text-decoration:none; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
+.footer-shops a:hover {opacity:.5}
+.footer-shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); transition:opacity .3s}
+.footer-shops a:hover:before {opacity:.5}

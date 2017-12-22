@@ -134,7 +134,9 @@
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
             var player1;
+            var player1Status = false;
             var player2;
+            var player2Status = false;
             function onYouTubeIframeAPIReady() {
                 player1 = new YT.Player("player1", {
                     height: "799",
@@ -167,10 +169,16 @@
             function onPlayer1Ready(event) {
                 $(window).on('scroll', function() {
                     var curScroll = $(window).scrollTop();
-                    if ((curScroll + $(window).height() > $('.video-1').offset().top + $('.video-1').height())) {
-                        player1.playVideo();
+                    if ((curScroll + $(window).height() > $('.video-1').offset().top) && (curScroll < $('.video-1').offset().top + $('.video-1').outerHeight())) {
+                        if (!player1Status) {
+                            player1Status = true;
+                            player1.playVideo();
+                        }
                     } else {
-                        player1.stopVideo();
+                        if (player1Status) {
+                            player1.stopVideo();
+                            player1Status = false;
+                        }
                     }
                 });
             }
@@ -178,10 +186,16 @@
             function onPlayer2Ready(event) {
                 $(window).on('scroll', function() {
                     var curScroll = $(window).scrollTop();
-                    if ((curScroll + $(window).height() > $('.video-2').offset().top + $('.video-2').height())) {
-                        player2.playVideo();
+                    if ((curScroll + $(window).height() > $('.video-2').offset().top) && (curScroll < $('.video-2').offset().top + $('.video-2').outerHeight())) {
+                        if (!player2Status) {
+                            player2Status = true;
+                            player2.playVideo();
+                        }
                     } else {
-                        player2.stopVideo();
+                        if (player2Status) {
+                            player2.stopVideo();
+                            player2Status = false;
+                        }
                     }
                 });
             }
