@@ -1,0 +1,141 @@
+@font-face {font-family:"AvantGardeGothic"; src:url("../fonts/AvantGardeGothicC.woff") format("woff"); font-weight:normal; font-style:normal}
+@font-face {font-family:"AvantGardeGothic"; src:url("../fonts/AvantGardeGothicC-Oblique.woff") format("woff"); font-weight:normal; font-style:italic}
+@font-face {font-family:"Federico"; src:url("../fonts/Federico.woff") format("woff"); font-weight:normal; font-style:normal}
+
+* {outline:none}
+
+html {min-width:1200px}
+
+body {min-width:1200px; margin:0; padding:0; font:19px/27px AvantGardeGothic, sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
+
+a {color:#4b3c8f}
+
+img {border:none}
+
+nav {position:absolute; left:0; top:130px; right:0; z-index:99; text-align:center}
+nav.fixed {position:fixed; height:67px; top:0; padding:43px 0 0 0; background:rgba(0, 0, 0, .87)}
+nav ul {margin:0; padding:0; list-style:none; display:inline-block; vertical-align:top; font-size:14px; text-transform:uppercase; letter-spacing:1px}
+nav ul li {float:left; margin:0 0 0 40px; padding:0}
+nav ul li:first-child {margin:0}
+nav ul li a {color:#fff; text-decoration:none; transition:opacity .3s}
+nav ul li a:hover {opacity:.5}
+
+.container {max-width:1200px; margin:0 auto}
+.container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.intro {height:100vh; position:relative; background:#000 url(../images/intro.jpg) no-repeat center; background-size:cover}
+.intro iframe {position:absolute; left:0; top:0; width:100%; height:100%}
+
+.intro-content {position:absolute; left:0; top:0; right:0}
+
+.social {float:left; padding:66px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.social a {display:inline-block; vertical-align:middle; transition:opacity .3s; margin:0 0 0 12px}
+.social a:first-child {margin:0}
+.social a:hover {opacity:.5}
+
+.phone {float:right; font-size:12px; color:#fff; padding:61px 0 0 0; letter-spacing:1px}
+.phone a {color:#fff; text-decoration:none}
+
+.shops {float:right; font-size:12px; color:#fff; padding:61px 40px 0 0; text-transform:uppercase; letter-spacing:1px}
+.shops a {color:#fff; text-decoration:none; opacity:.5; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
+.shops a:hover {opacity:1}
+.shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); opacity:.5; transition:opacity .3s}
+.shops a:hover:before {opacity:1}
+
+.intro-more {position:absolute; left:0; bottom:79px; right:0}
+.intro-more-wrap {position:relative; height:0}
+.intro-more-wrap a {float:right; font-size:12px; color:#fff; padding:0 0 0 32px; text-transform:uppercase; letter-spacing:1px; position:relative; text-decoration:none; opacity:.5; transition:opacity .3s}
+.intro-more-wrap a:hover {opacity:1}
+.intro-more-wrap a:before {content:""; display:block; width:23px; height:18px; position:absolute; left:0; top:4px; background:url(../images/intro-more.png); opacity:.5; transition:opacity .3s}
+.intro-more-wrap a:hover:before {opacity:1}
+
+.intro-scroll {position:absolute; left:50%; bottom:70px; width:20px; height:46px; background:url(../images/intro-scroll.png); margin:0 0 0 -10px}
+
+.teaser {height:830px; background:url(../images/teaser.jpg) no-repeat center; background-size:cover; color:#fff; text-align:center; font-size:25px; line-height:30px}
+.teaser-inner {position:relative; top:50%; transform:translateY(-50%)}
+.teaser-inner p {margin:30px 0 0 0; padding:0}
+.teaser-inner p:first-child {margin:0}
+
+.cosmogony {text-align:center; background:#edd6ad url(../images/cosmogony.jpg) no-repeat center; background-size:auto 100%; padding:83px 0 87px 0}
+.cosmogony-title {font-size:33px; line-height:41px; letter-spacing:1px}
+.cosmogony-text-1 {padding:53px 0 0 0}
+.cosmogony-text-2 {font-style:italic; line-height:25px; padding:50px 0 0 0}
+
+.sun-light {background:#412c16 url(../images/sun-light.jpg) no-repeat center; background-size:cover; color:#fff; padding:0 0 72px 0}
+.sun-light-inner {float:right; width:660px}
+.sun-light-title {line-height:0; padding:76px 0 0 0}
+.sun-light-text {font-size:17px; line-height:25px; padding:4px 0 0 0}
+.sun-light-text p {margin:25px 0 0 0; padding:0}
+.sun-light-text p.sun-light-subtitle {margin:35px 0 -10px 0}
+
+.video-1 {height:799px; position:relative; background:url(../images/video-1.jpg) no-repeat center; background-size:cover}
+.video-1 iframe {position:absolute; left:0; top:0; width:100%; height:100%}
+
+.moon-light {background:#14192b url(../images/moon-light.jpg) no-repeat center; background-size:cover; color:#fff; padding:0 0 81px 0}
+.moon-light-inner {float:left; width:600px}
+.moon-light-title {line-height:0; padding:87px 0 0 0}
+.moon-light-text {font-size:17px; line-height:25px; margin:-4px 0 0 0}
+.moon-light-text p {margin:25px 0 0 0; padding:0}
+.moon-light-text p.moon-light-subtitle {margin:35px 0 -10px 0}
+
+.author {background:#edd6ad url(../images/author.jpg) no-repeat center; background-size:auto 100%; text-align:center; padding:85px 0 83px 0}
+.author-title {font-size:21px; text-transform:uppercase; letter-spacing:1px}
+.author-title:before,
+.author-title:after {content:""; display:inline-block; vertical-align:middle; width:60px; height:1px; background:#000; opacity:.1; margin:-6px 22px 0 22px}
+.author-name {font-size:54px; line-height:60px; letter-spacing:1px; padding:21px 0 0 0}
+.author-photo {line-height:0; padding:39px 0 0 0}
+.author-text {padding:41px 0 0 0}
+.author-text p {margin:27px 0 0 0; padding:0}
+.author-text p:first-child {margin:0}
+
+.video-2 {height:811px; position:relative; background:url(../images/video-2.jpg) no-repeat center; background-size:cover}
+.video-2 iframe {position:absolute; left:0; top:0; width:100%; height:100%}
+
+.design {background:#edd6ad url(../images/design.jpg) no-repeat center bottom; padding:85px 0 77px 0; position:relative}
+.design:before {content:""; display:block; position:absolute; left:0; top:0; right:0; height:17px; background:url(../images/design-shadow.png)}
+.design-text p {margin:27px 0 0 0; padding:0}
+.design-text p:first-child {margin:0}
+
+.design-cols {margin:0 -45px; padding:78px 0 0 0}
+.design-cols:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.design-col {float:left; width:50%; padding:0 45px; box-sizing:border-box}
+.design-box-preview {float:right; line-height:0; margin:-7px -24px 0 -48px}
+.design-box-content {margin:0 255px 0 0}
+.design-box-title {font:27px/27px Federico, sans-serif}
+.design-box-text {font-size:17px; padding:21px 0 0 0}
+.design-box-name {font:33px/33px Federico, sans-serif; margin:32px 0 0 0}
+.design-box-name:before {content:""; display:block; width:129px; height:1px; background:#000; opacity:.1; margin:0 0 37px 0}
+
+.company {background:url(../images/company.png) no-repeat center bottom; padding:0 0 60px 0}
+.company-text {float:left; font-size:17px; line-height:25px; width:68%; padding:82px 0 0 0}
+.company-main {float:right; width:29%; text-align:center; padding:74px 0 0 0}
+.company-main-logo {line-height:0}
+.company-main-text {font-style:italic; color:#6a6a6a; font-size:15px; line-height:23px; padding:31px 0 0 0}
+
+.contacts {height:389px; position:relative; background:url(../images/contacts-map.png) no-repeat center}
+
+.map-point {float:right; line-height:0; padding:145px 50px 0 0}
+.contacts-inner {float:left; width:444px; text-align:center}
+.contacts-title {text-transform:uppercase; font-size:33px; line-height:41px; padding:84px 0 0 0}
+.contacts-address {padding:31px 0 0 0}
+.contacts-phones a {color:#000; text-decoration:none}
+.contacts-email {font-style:italic; font-size:17px; padding:25px 0 0 0}
+.contacts-social {font-style:italic; font-size:17px; padding:13px 0 0 0}
+.contacts-social a {display:inline-block; vertical-align:middle; position:relative; line-height:0; margin:0 0 0 8px}
+.contacts-social a:hover img:nth-child(1) {transition:opacity .3s}
+.contacts-social a img:nth-child(2) {position:absolute; left:0; top:0; opacity:0; transition:opacity .3s}
+.contacts-social a:hover img:nth-child(1) {opacity:0}
+.contacts-social a:hover img:nth-child(2) {opacity:1}
+
+footer {background:#101519; text-transform:uppercase; font-size:12px; letter-spacing:1px; color:#fff; padding:82px 0 80px 0}
+.copyrights {float:left; width:25%}
+.email {float:left}
+.email a {color:#fff; transition:opacity .3s}
+.email a:hover {opacity:.5}
+.footer-phone {float:right; text-align:right; width:22%}
+.footer-phone a {color:#fff; text-decoration:none}
+.footer-shops {float:right}
+.footer-shops a {color:#fff; text-decoration:none; opacity:.5; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
+.footer-shops a:hover {opacity:1}
+.footer-shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); opacity:.5; transition:opacity .3s}
+.footer-shops a:hover:before {opacity:1}
