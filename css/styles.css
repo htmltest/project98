@@ -4,9 +4,9 @@
 
 * {outline:none}
 
-html {min-width:1200px}
+html {min-width:1230px}
 
-body {min-width:1200px; margin:0; padding:0; font:19px/27px AvantGardeGothic, sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
+body {min-width:1230px; margin:0; padding:0; font:19px/27px AvantGardeGothic, sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
 
 a {color:#4b3c8f}
 
@@ -20,7 +20,7 @@ nav ul li:first-child {margin:0}
 nav ul li a {color:#fff; text-decoration:none; transition:opacity .3s}
 nav ul li a:hover {opacity:.5}
 
-.container {max-width:1200px; margin:0 auto}
+.container {max-width:1200px; margin:0 auto; padding:0 15px}
 .container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 .intro {height:100vh; position:relative; background:#000 url(../images/intro.jpg) no-repeat center; background-size:cover}
@@ -96,8 +96,9 @@ nav ul li a:hover {opacity:.5}
 .design-text p {margin:27px 0 0 0; padding:0}
 .design-text p:first-child {margin:0}
 
-.design-cols {margin:0 -45px; padding:78px 0 0 0}
-.design-cols:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.design-cols {width:100%; position:relative; overflow:hidden}
+.design-cols-inner {margin:0 -45px; padding:78px 0 0 0}
+.design-cols-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .design-col {float:left; width:50%; padding:0 45px; box-sizing:border-box}
 .design-box-preview {float:right; line-height:0; margin:-7px -24px 0 -48px}
 .design-box-content {margin:0 255px 0 0}
