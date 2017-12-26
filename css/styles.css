@@ -1,12 +1,10 @@
-@font-face {font-family:"AvantGardeGothic"; src:url("../fonts/AvantGardeGothicC.woff") format("woff"); font-weight:normal; font-style:normal}
-@font-face {font-family:"AvantGardeGothic"; src:url("../fonts/AvantGardeGothicC-Oblique.woff") format("woff"); font-weight:normal; font-style:italic}
 @font-face {font-family:"Federico"; src:url("../fonts/Federico.woff") format("woff"); font-weight:normal; font-style:normal}
 
 * {outline:none}
 
 html {min-width:1230px}
 
-body {min-width:1230px; margin:0; padding:0; font:19px/27px AvantGardeGothic, sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
+body {min-width:1230px; margin:0; padding:0; font:19px/27px "PT Serif", sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
 
 a {color:#4b3c8f}
 
@@ -19,6 +17,8 @@ nav ul li {float:left; margin:0 0 0 40px; padding:0}
 nav ul li:first-child {margin:0}
 nav ul li a {color:#fff; text-decoration:none; transition:opacity .3s}
 nav ul li a:hover {opacity:.5}
+.nav-line {display:none}
+nav.fixed .nav-line {display:block; position:absolute; left:0; top:0; height:4px; transition:width .3s; background:#8b82b7; background:-moz-linear-gradient(left, #8b82b7 0%, #e45310 100%); background:-webkit-linear-gradient(left, #8b82b7 0%, #e45310 100%); background:linear-gradient(to right, #8b82b7 0%, #e45310 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#8b82b7", endColorstr="#e45310",GradientType=1)}
 
 .container {max-width:1200px; margin:0 auto; padding:0 15px}
 .container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -33,7 +33,7 @@ nav ul li a:hover {opacity:.5}
 .social a:first-child {margin:0}
 .social a:hover {opacity:.5}
 
-.phone {float:right; font-size:12px; color:#fff; padding:61px 0 0 0; letter-spacing:1px}
+.phone {float:right; font-size:12px; color:#fff; padding:61px 0 0 0; letter-spacing:1px; font-weight:bold}
 .phone a {color:#fff; text-decoration:none}
 
 .shops {float:right; font-size:12px; color:#fff; padding:61px 40px 0 0; text-transform:uppercase; letter-spacing:1px}
@@ -51,15 +51,18 @@ nav ul li a:hover {opacity:.5}
 
 .intro-scroll {position:absolute; left:50%; top:100vh; width:20px; height:46px; background:url(../images/intro-scroll.png); margin:-116px 0 0 -10px}
 
-.teaser {height:830px; background:url(../images/teaser.jpg) no-repeat center; background-size:cover; color:#fff; text-align:center; font-size:25px; line-height:30px}
+.teaser {height:830px; background:url(../images/teaser.jpg) no-repeat center; color:#fff; text-align:center; font-size:25px; line-height:30px}
 .teaser-inner {position:relative; top:50%; transform:translateY(-50%)}
 .teaser-inner p {margin:30px 0 0 0; padding:0}
 .teaser-inner p:first-child {margin:0}
 
-.cosmogony {text-align:center; background:#edd6ad url(../images/cosmogony.jpg) no-repeat center; background-size:auto 100%; padding:83px 0 87px 0}
-.cosmogony-title {font-size:33px; line-height:41px; letter-spacing:1px}
-.cosmogony-text-1 {padding:53px 0 0 0}
-.cosmogony-text-2 {font-style:italic; line-height:25px; padding:50px 0 0 0}
+.cosmogony {text-align:center; background:#edd6ad; padding:83px 0 87px 0; overflow:hidden; width:100%; position:relative}
+.cosmogony-bg-1 {position:absolute; width:305px; height:265px; background:url(../images/cosmogony-bg-1.png); position:absolute; left:50%; top:0; margin-left:395px}
+.cosmogony-bg-2 {position:absolute; width:307px; height:130px; background:url(../images/cosmogony-bg-2.png); position:absolute; left:50%; bottom:0; margin-left:175px}
+.cosmogony-bg-3 {position:absolute; width:430px; height:361px; background:url(../images/cosmogony-bg-3.png); position:absolute; left:50%; top:87px; margin-left:-691px}
+.cosmogony-title {font-size:33px; line-height:41px; letter-spacing:1px; position:relative}
+.cosmogony-text-1 {padding:53px 0 0 0; position:relative}
+.cosmogony-text-2 {font-style:italic; line-height:25px; padding:50px 0 0 0; position:relative}
 
 .sun-light {background:#412c16 url(../images/sun-light.jpg) no-repeat center; background-size:cover; color:#fff; padding:0 0 72px 0}
 .sun-light-inner {float:right; width:660px}
@@ -78,21 +81,29 @@ nav ul li a:hover {opacity:.5}
 .moon-light-text p {margin:25px 0 0 0; padding:0}
 .moon-light-text p.moon-light-subtitle {margin:35px 0 -10px 0}
 
-.author {background:#edd6ad url(../images/author.jpg) no-repeat center; background-size:auto 100%; text-align:center; padding:85px 0 83px 0}
-.author-title {font-size:21px; text-transform:uppercase; letter-spacing:1px}
+.author {background:#edd6ad; text-align:center; padding:85px 0 83px 0; position:relative; width:100%; overflow:hidden}
+.author-bg-1 {position:absolute; width:499px; height:546px; left:50%; top:0; margin-left:302px; background:url(../images/author-bg-1.png)}
+.author-bg-2 {position:absolute; width:302px; height:195px; left:50%; bottom:0; margin-left:577px; background:url(../images/author-bg-2.png)}
+.author-bg-3 {position:absolute; width:143px; height:138px; left:50%; top:531px; margin-left:-494px; background:url(../images/author-bg-3.png)}
+.author-bg-4 {position:absolute; width:541px; height:437px; left:50%; top:0; margin-left:-859px; background:url(../images/author-bg-4.png)}
+.author-title {font-size:21px; text-transform:uppercase; letter-spacing:1px; position:relative}
 .author-title:before,
 .author-title:after {content:""; display:inline-block; vertical-align:middle; width:60px; height:1px; background:#000; opacity:.1; margin:-6px 22px 0 22px}
-.author-name {font-size:54px; line-height:60px; letter-spacing:1px; padding:21px 0 0 0}
-.author-photo {line-height:0; padding:39px 0 0 0}
-.author-text {padding:41px 0 0 0}
+.author-name {font-size:54px; line-height:60px; letter-spacing:1px; padding:21px 0 0 0; position:relative}
+.author-photo {line-height:0; padding:39px 0 0 0; position:relative}
+.author-text {padding:41px 0 0 0; position:relative}
 .author-text p {margin:27px 0 0 0; padding:0}
 .author-text p:first-child {margin:0}
 
 .video-2 {padding:56.25% 0 0 0; position:relative; background:url(../images/video-2.jpg) no-repeat center; background-size:cover}
 .video-2 iframe {position:absolute; left:0; top:0; width:100%; height:100%}
 
-.design {background:#edd6ad url(../images/design.jpg) no-repeat center bottom; padding:85px 0 77px 0; position:relative}
+.design {background:#edd6ad; padding:85px 0 77px 0; position:relative; width:100%; overflow:hidden}
 .design:before {content:""; display:block; position:absolute; left:0; top:0; right:0; height:17px; background:url(../images/design-shadow.png)}
+.design-bg-1 {position:absolute; width:291px; height:243px; left:50%; top:361px; margin-left:510px; background:url(../images/design-bg-1.png)}
+.design-bg-2 {position:absolute; width:1100px; height:131px; left:50%; bottom:0; margin-left:-550px; background:url(../images/design-bg-2.png)}
+.design-bg-3 {position:absolute; width:150px; height:143px; left:50%; top:455px; margin-left:-772px; background:url(../images/design-bg-3.png)}
+.design .container {position:relative}
 .design-text p {margin:27px 0 0 0; padding:0}
 .design-text p:first-child {margin:0}
 
@@ -107,7 +118,9 @@ nav ul li a:hover {opacity:.5}
 .design-box-name {font:33px/33px Federico, sans-serif; margin:32px 0 0 0}
 .design-box-name:before {content:""; display:block; width:129px; height:1px; background:#000; opacity:.1; margin:0 0 37px 0}
 
-.company {background:url(../images/company.png) no-repeat center bottom; padding:0 0 60px 0}
+.company {padding:0 0 60px 0; position:relative}
+.company-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/company.png) no-repeat center bottom}
+.company .container {position:relative}
 .company-text {float:left; font-size:17px; line-height:25px; width:68%; padding:82px 0 0 0}
 .company-main {float:right; width:29%; text-align:center; padding:74px 0 0 0}
 .company-main-logo {line-height:0}
@@ -115,9 +128,13 @@ nav ul li a:hover {opacity:.5}
 .company-main-text a {text-decoration:none}
 .company-main-text a:hover {text-decoration:underline}
 
-.contacts {height:389px; position:relative; background:url(../images/contacts-map.png) no-repeat center}
+.contacts {height:389px; position:relative}
+.contacts-map {position:absolute; left:0; top:0; width:100%; height:389px}
+.contacts .container {position:relative}
 
-.map-point {float:right; line-height:0; padding:145px 50px 0 0}
+.contacts-wrap {position:absolute; left:0; top:0; right:0; height:0}
+.contacts-wrap:after {content:""; display:block; width:472px; height:1px; position:absolute; left:50%; margin-left:-100px; top:178px; height:1px; background:rgba(0, 0, 0, .2)}
+.contacts-wrap .container:after {display:none}
 .contacts-inner {float:left; width:444px; text-align:center}
 .contacts-title {text-transform:uppercase; font-size:33px; line-height:41px; padding:84px 0 0 0}
 .contacts-address {padding:31px 0 0 0}
@@ -137,10 +154,15 @@ footer {background:#101519; text-transform:uppercase; font-size:12px; letter-spa
 .email {float:left}
 .email a {color:#fff; transition:opacity .3s}
 .email a:hover {opacity:.5}
-.footer-phone {float:right; text-align:right; width:22%}
+.footer-phone {float:right; text-align:right; width:22%; font-weight:bold}
 .footer-phone a {color:#fff; text-decoration:none}
 .footer-shops {float:right}
 .footer-shops a {color:#fff; text-decoration:none; transition:opacity .3s; display:inline-block; vertical-align:top; position:relative; padding:0 0 0 24px}
 .footer-shops a:hover {opacity:.5}
 .footer-shops a:before {content:""; display:block; width:14px; height:18px; position:absolute; left:0; top:4px; background:url(../images/shops.png); transition:opacity .3s}
 .footer-shops a:hover:before {opacity:.5}
+
+.up-link {display:none; position:fixed; right:70px; bottom:70px; z-index:99; width:60px; height:60px; background:rgba(255, 255, 255, .3); border-radius:50%}
+.up-link:before {content:""; display:block; width:50px; height:50px; background:rgba(0, 0, 0, .5); border-radius:50%; position:absolute; left:5px; top:5px}
+.up-link:after {content:""; display:block; width:20px; height:11px; background:url(../images/up.png); position:absolute; left:20px; top:24px}
+.up-link.visible {display:block}
