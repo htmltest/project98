@@ -169,7 +169,7 @@ nav.fixed .nav-line {display:block; position:absolute; left:0; top:0; height:4px
 }
 
 @media screen and (max-width:1199px) {
-    .teaser {height:564px; font-size:21px; line-height:25px; background-size:cover}
+    .teaser {height:564px; font-size:21px; line-height:25px; background-size:200% auto; background-position:bottom center}
     .teaser-inner p {margin:25px 0 0 0}
     .teaser-inner p:first-child {margin:0}
 }
